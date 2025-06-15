@@ -5,24 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rxmlo - Geleceğin En Gelişmiş Discord Botu</title>
 
-  <!-- Sosyal medya kartı -->
+  <!-- Discord & sosyal medya kartı -->
   <meta name="description" content="Rxmlo — Seviye, moderasyon, eğlence ve daha fazlasını sunan gelişmiş Discord botu. Şimdi sunucuna ekle!">
   <meta name="theme-color" content="#56ccf2" />
   <meta property="og:title" content="Rxmlo - Gelişmiş Discord Botu" />
   <meta property="og:description" content="Seviye sistemi, moderasyon, eğlence komutları ve daha fazlası ile sunucunuzu bir üst seviyeye taşıyın." />
-  <meta property="og:image" content="https://cdn.discordapp.com/attachments/123456789012345678/987654321098765432/rxmlo-og.png" />
+  <meta property="og:image" content="https://rxmloweb.vercel.app/avatar/rxmlo-og.png" />
   <meta property="og:url" content="https://rxmloweb.vercel.app/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rxmlo - Discord Botu" />
   <meta name="twitter:description" content="Rxmlo botu ile sunucunu geliştirmeye hemen başla!" />
-  <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/123456789012345678/987654321098765432/rxmlo-og.png" />
+  <meta name="twitter:image" content="https://rxmloweb.vercel.app/avatar/rxmlo-og.png" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet" />
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #141e30, #243b55);
@@ -47,18 +49,26 @@
       display: flex;
       align-items: center;
       gap: 1rem;
+      cursor: default;
       user-select: none;
     }
-    .logo-container img {
+    .logo-svg {
       width: 52px;
       height: 52px;
       border-radius: 50%;
-      box-shadow: 0 0 12px #56ccf2aa;
+      background: black;
+      box-shadow: 0 0 15px #56ccf2cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: transform 0.4s ease;
     }
-    .logo-container img:hover {
-      transform: scale(1.12) rotate(8deg);
-      box-shadow: 0 0 18px #56ccf2ff;
+    .logo-svg:hover {
+      transform: scale(1.15) rotate(15deg);
+      box-shadow: 0 0 25px #56ccf2ff;
+    }
+    .logo-svg svg {
+      display: block;
     }
     .logo-container h1 {
       font-family: 'Montserrat', sans-serif;
@@ -134,7 +144,15 @@
 <body>
   <header>
     <div class="logo-container" title="Rxmlo Discord Bot">
-      <img src="https://cdn.discordapp.com/attachments/123456789012345678/987654321098765432/rxmlo-og.png" alt="Rxmlo Logo">
+      <div class="logo-svg" aria-label="Rxmlo Logo" role="img">
+        <svg width="52" height="52" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
+          <rect width="150" height="150" fill="#000000" rx="20" ry="20"/>
+          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                font-family="Montserrat, sans-serif" font-weight="700" font-size="90" fill="#ffffff">
+            RX
+          </text>
+        </svg>
+      </div>
       <h1>Rxmlo</h1>
     </div>
     <nav>
@@ -148,7 +166,13 @@
   <main>
     <h2>Geleceğin En Gelişmiş Discord Botu: <span style="color:#56ccf2;">Rxmlo</span></h2>
     <p>
-     Rxmlo, sıradan bir Discord botu olmanın ötesine geçerek; moderasyon, eğlence, seviye sistemi, otomasyon, güvenlik ve topluluk yönetimini tek bir merkezde toplayan yeni nesil bir yapay zekâ destekli asistandır. Her ölçekten sunucu için optimize edilmiş olan Rxmlo, sade arayüzü ve özelleştirilebilir altyapısıyla yöneticilerin yükünü hafifletirken, üyelerin etkileşimini artırmayı hedefler.
+      Rxmlo, sıradan bir Discord botu olmanın ötesine geçerek; moderasyon, eğlence, seviye sistemi, otomasyon, güvenlik ve topluluk yönetimini tek bir merkezde toplayan yeni nesil bir yapay zekâ destekli asistandır. Her ölçekten sunucu için optimize edilmiş olan Rxmlo, sade arayüzü ve özelleştirilebilir altyapısıyla yöneticilerin yükünü hafifletirken, üyelerin etkileşimini artırmayı hedefler.
+    </p>
+    <p>
+      Dinamik komut sistemi, anlık analiz yetenekleri ve güncellenebilir modülleri sayesinde Rxmlo; sunucunuza profesyonel bir görünüm kazandırır. İster bir oyun topluluğu olun, ister eğitim ya da içerik sunan bir ağ — Rxmlo, tam ihtiyacınız olan destekle hizmetinizde.  
+    </p>
+    <p>
+      Şimdi sunucunuza Rxmlo’yu ekleyin ve sıradanlıktan çıkıp gerçek anlamda <strong>geleceğin sunucusunu</strong> inşa etmeye başlayın. Teknolojinin sunduğu en gelişmiş Discord deneyimine merhaba deyin.
     </p>
   </main>
 
