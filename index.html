@@ -4,15 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rxmlo - Geleceğin En Gelişmiş Discord Botu</title>
-  
-  <!-- Google Fonts: Poppins & Montserrat -->
+
+  <!-- Sosyal medya kartı -->
+  <meta name="description" content="Rxmlo — Seviye, moderasyon, eğlence ve daha fazlasını sunan gelişmiş Discord botu. Şimdi sunucuna ekle!">
+  <meta name="theme-color" content="#56ccf2" />
+  <meta property="og:title" content="Rxmlo - Gelişmiş Discord Botu" />
+  <meta property="og:description" content="Seviye sistemi, moderasyon, eğlence komutları ve daha fazlası ile sunucunuzu bir üst seviyeye taşıyın." />
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/123456789012345678/987654321098765432/rxmlo-og.png" />
+  <meta property="og:url" content="https://rxmloweb.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rxmlo - Discord Botu" />
+  <meta name="twitter:description" content="Rxmlo botu ile sunucunu geliştirmeye hemen başla!" />
+  <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/123456789012345678/987654321098765432/rxmlo-og.png" />
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet" />
-  
+
   <style>
-    /* Reset */
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #141e30, #243b55);
@@ -20,8 +30,6 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      overflow-x: hidden;
     }
     header {
       background: rgba(255 255 255 / 0.05);
@@ -35,53 +43,39 @@
       top: 0;
       z-index: 100;
     }
-
-    /* Logo & Başlık bölümü */
     .logo-container {
       display: flex;
       align-items: center;
       gap: 1rem;
-      cursor: default;
       user-select: none;
     }
-    .logo-svg {
+    .logo-container img {
       width: 52px;
       height: 52px;
       border-radius: 50%;
-      box-shadow: 0 0 15px #56ccf2cc;
+      box-shadow: 0 0 12px #56ccf2aa;
       transition: transform 0.4s ease;
-      background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
-    .logo-svg:hover {
-      transform: scale(1.15) rotate(15deg);
-      box-shadow: 0 0 25px #56ccf2ff;
-    }
-    .logo-svg svg {
-      display: block;
+    .logo-container img:hover {
+      transform: scale(1.12) rotate(8deg);
+      box-shadow: 0 0 18px #56ccf2ff;
     }
     .logo-container h1 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       color: #4ca1af;
       letter-spacing: 2px;
-      text-shadow: 0 0 10px #56ccf2;
+      text-shadow: 0 0 8px #56ccf2;
     }
-
     nav a {
       color: #a8c0ff;
       text-decoration: none;
       margin-left: 2.2rem;
       font-weight: 600;
       font-size: 1.2rem;
-      padding-bottom: 4px;
       border-bottom: 3px solid transparent;
       transition: all 0.3s ease;
-      letter-spacing: 0.6px;
-      white-space: nowrap;
     }
     nav a:hover {
       color: #56ccf2;
@@ -94,32 +88,22 @@
       margin: 4rem auto 6rem;
       padding: 0 2rem;
       text-align: center;
-      line-height: 1.65;
     }
     main h2 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 800;
-      font-size: 3.8rem;
+      font-size: 3.2rem;
       margin-bottom: 1rem;
       background: linear-gradient(90deg, #4ca1af, #c4e0e5);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      user-select: none;
-      text-shadow: 0 0 12px rgb(76 161 175 / 0.8);
+      text-shadow: 0 0 10px rgb(76 161 175 / 0.7);
     }
     main p {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       color: #ccd6f6dd;
       max-width: 720px;
       margin: 0 auto 3rem;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-    }
-    main p.long {
-      max-width: 720px;
-      margin: 0 auto 4rem;
-      font-size: 1.15rem;
-      color: #b1c6f3cc;
     }
     footer {
       background: rgba(255 255 255 / 0.05);
@@ -127,43 +111,30 @@
       text-align: center;
       font-size: 0.9rem;
       color: #7993c2dd;
-      letter-spacing: 0.1em;
-      user-select: none;
     }
 
-    /* Responsive */
     @media (max-width: 640px) {
       header {
-        padding: 1rem 1.5rem;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
       }
       .logo-container h1 {
         font-size: 2rem;
       }
       nav a {
+        font-size: 1rem;
         margin-left: 1rem;
-        font-size: 1rem;
-      }
-      main h2 {
-        font-size: 2.8rem;
-      }
-      main p {
-        font-size: 1rem;
       }
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="logo-container" title="Rxmlo Discord Bot">
-      <div class="logo-svg" aria-label="Rxmlo Logo" role="img">
-        <svg width="52" height="52" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
-          <rect width="150" height="150" fill="#000000" rx="20" ry="20"/>
-          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-                font-family="Montserrat, sans-serif" font-weight="700" font-size="90" fill="#ffffff">
-            RX
-          </text>
-        </svg>
-      </div>
+      <img src="https://cdn.discordapp.com/attachments/123456789012345678/987654321098765432/rxmlo-og.png" alt="Rxmlo Logo">
       <h1>Rxmlo</h1>
     </div>
     <nav>
@@ -175,15 +146,9 @@
   </header>
 
   <main>
-    <h2>Geleceğin En Güçlü ve Gelişmiş Discord Botu: <br> <span style="color:#56ccf2;">Rxmlo</span></h2>
+    <h2>Geleceğin En Gelişmiş Discord Botu: <span style="color:#56ccf2;">Rxmlo</span></h2>
     <p>
-      Rxmlo, sadece bir bot değil; sunucunuzun her ihtiyacını karşılamak üzere tasarlanmış, modüler ve yapay zeka destekli kapsamlı bir Discord yardımcısıdır. 
-      Seviye sistemi, gelişmiş moderasyon araçları, eğlence komutları, özel rol sistemleri, davet takip ve koruma özellikleriyle, 
-      sunucunuzu güvenli ve eğlenceli bir hale getirmek için yanınızda.
-    </p>
-    <p class="long">
-      Özelleştirilebilir komut yapısı, otomatik güncellenen özellikleri ve hızlı destek hizmeti ile Rxmlo, Discord topluluğunuzun vazgeçilmez yardımcısı olacak. 
-      Hemen kullanmaya başlayın, sunucunuzu bir adım öne taşıyın!
+     Rxmlo, sıradan bir Discord botu olmanın ötesine geçerek; moderasyon, eğlence, seviye sistemi, otomasyon, güvenlik ve topluluk yönetimini tek bir merkezde toplayan yeni nesil bir yapay zekâ destekli asistandır. Her ölçekten sunucu için optimize edilmiş olan Rxmlo, sade arayüzü ve özelleştirilebilir altyapısıyla yöneticilerin yükünü hafifletirken, üyelerin etkileşimini artırmayı hedefler.
     </p>
   </main>
 
