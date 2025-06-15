@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rxmlo Komutlar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: #e0e6f8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+    header {
+      background: rgba(255 255 255 / 0.05);
+      backdrop-filter: blur(12px);
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 15px rgb(66 135 245 / 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #4ca1af;
+      letter-spacing: 2px;
+      text-shadow: 0 0 8px #56ccf2;
+      cursor: default;
+      user-select: none;
+    }
+    nav a {
+      color: #a8c0ff;
+      text-decoration: none;
+      margin-left: 2.2rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding-bottom: 4px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+      letter-spacing: 0.6px;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      color: #56ccf2;
+      border-bottom-color: #56ccf2;
+      transform: translateY(-2px);
+    }
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 5rem auto 6rem;
+      padding: 0 2rem;
+      line-height: 1.7;
+    }
+    main h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: #56ccf2;
+      text-shadow: 0 0 10px #56ccf2;
+      text-align: center;
+    }
+    section.command-category {
+      background: rgba(255 255 255 / 0.06);
+      padding: 1.8rem 2.2rem;
+      margin-bottom: 2rem;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgb(50 70 150 / 0.25);
+      backdrop-filter: blur(8px);
+    }
+    section.command-category h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      color: #4ca1af;
+      border-bottom: 2px solid #56ccf2;
+      padding-bottom: 6px;
+      user-select: none;
+    }
+    ul.commands-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+      gap: 12px 24px;
+    }
+    ul.commands-list li {
+      background: #243b55;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #cde4f7;
+      text-align: center;
+      box-shadow: 0 4px 10px rgb(70 110 160 / 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: default;
+      user-select: none;
+    }
+    ul.commands-list li:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgb(86 204 242 / 0.7);
+      color: #56ccf2;
+    }
+    footer {
+      background: rgba(255 255 255 / 0.05);
+      padding: 1.5rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #7993c2dd;
+      letter-spacing: 0.1em;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      header {
+        padding: 1rem 1.5rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        margin-left: 1rem;
+        font-size: 1rem;
+      }
+      main {
+        margin: 3rem 1rem 4rem;
+        padding: 0 1rem;
+      }
+      section.command-category h3 {
+        font-size: 1.4rem;
+      }
+      ul.commands-list {
+        grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+        gap: 10px 16px;
+      }
+      ul.commands-list li {
+        font-size: 1rem;
+        padding: 10px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rxmlo</h1>
+    <nav>
+      <a href="index.html">Anasayfa</a>
+      <a href="bot-davet.html">Bot Davet</a>
+      <a href="rxmlo-yap.html">Kendi Rxmlo'nu Yap</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Rxmlo Bot Komutları</h2>
+
+    <section class="command-category">
+      <h3>Abone Sistemi</h3>
+      <ul class="commands-list">
+        <li>/abone-log</li>
+        <li>/abone-panel</li>
+        <li>/abone-rol-ayarla</li>
+        <li>/abone-yetkili-ayarla</li>
+      </ul>
+    </section>
+
+    <section class="command-category">
+      <h3>Moderasyon</h3>
+      <ul class="commands-list">
+        <li>/ban</li>
+        <li>/ban-list</li>
+        <li>/kick</li>
+        <li>/mute</li>
+        <li>/unmute</li>
+        <li>/warn</li>
+        <li>/warn-ekle</li>
+        <li>/warn-sil</li>
+        <li>/forceban</li>
+        <li>/nuke</li>
+        <li>/temizle</li>
+        <li>/karaliste</li>
+        <li>/reklam-engel</li>
+        <li>/küfür-engel</li>
+        <li>/caps-lock-koruma</li>
+        <li>/spam-engel</li>
+        <li>/yavaş-mod</li>
+      </ul>
+    </section>
+
+    <section class="command-category">
+      <h3>Eğlence ve Oyunlar</h3>
+      <ul class="commands-list">
+        <li>/adam-asmaca</li>
+        <li>/ask-ölçer</li>
+        <li>/mucis</li>
+        <li>/zarat</li>
+      </ul>
+    </section>
+
+    <section class="command-category">
+      <h3>Sunucu Yönetimi</h3>
+      <ul class="commands-list">
+        <li>/giriş-çıkış</li>
+        <li>/giriş-çıkış-kapat</li>
+        <li>/kanal-açıklama</li>
+        <li>/mod-log</li>
+        <li>/mod-log-kapat</li>
+        <li>/medya-kanal</li>
+        <li>/medya-kanal-kapat</li>
+        <li>/otorol-ayarla</li>
+        <li>/otorol-kapat</li>
+        <li>/buton-rol</li>
+        <li>/özel-oda</li>
+        <li>/sunucu-banner</li>
+        <li>/sunucu-bilgi</li>
+        <li>/sunucu-pp</li>
+        <li>/register</li>
+        <li>/register-disable</li>
+        <li>/regisler-setup</li>
+      </ul>
+    </section>
+
+    <section class="command-category">
+      <h3>Genel ve Yardımcı Komutlar</h3>
+      <ul class="commands-list">
+        <li>/avatar</li>
+        <li>/ayarlar</li>
+        <li>/davet</li>
+        <li>/davet-sistemi</li>
+        <li>/davetlerim</li>
+        <li>/destek-sistemi</li>
+        <li>/dm-karşılama</li>
+        <li>/dogum-gunu</li>
+        <li>/emoji-ara</li>
+        <li>/gelen-etiket</li>
+        <li>/hatırlatıcı</li>
+        <li>/hava-durumu</li>
+        <li>/istatistik</li>
+        <li>/kendi-botunu-yap</li>
+        <li>/komut-şablonu</li>
+        <li>/koruma-sistemleri</li>
+        <li>/kullanıcı-bilgi</li>
+        <li>/kurucu</li>
+        <li>/not-sistemi</li>
+        <li>/notlarım</li>
+        <li>/oto-cevap ekle</li>
+        <li>/oto-cevap listele</li>
+        <li>/oylama</li>
+        <li>/özel-komut</li>
+        <li>/ping</li>
+        <li>/profil</li>
+        <li>/reroll</li>
+        <li>/rol-al</li>
+        <li>/rol-oluştur</li>
+        <li>/rxmlo-yazılım</li>
+        <li>/say</li>
+        <li>/seviye</li>
+        <li>/seviye-ayarla</li>
+        <li>/seviye-ekle</li>
+        <li>/seviye-sil</li>
+        <li>/seviye-sistemi-ayarla</li>
+        <li>/seviye-xp-ekle</li>
+        <li>/seviye-xp-sil</li>
+        <li>/snipe</li>
+        <li>/sunucu-banner</li>
+        <li>/temizle</li>
+        <li>/top</li>
+        <li>/unban</li>
+        <li>/yardım</li>
+        <li>/yasaklı-kelime-çıkar</li>
+        <li>/yasaklı-kelime-ekle</li>
+        <li>/yasaklı-kelime-liste</li>
+        <li>/yaz</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Rxmlo Yazılım | Tüm Hakları Saklıdır</p>
+  </footer>
+</body>
+</html>

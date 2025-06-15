@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rxmlo Bot Davet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: #e0e6f8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-x: hidden;
+    }
+    header {
+      background: rgba(255 255 255 / 0.05);
+      backdrop-filter: blur(12px);
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 15px rgb(66 135 245 / 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #4ca1af;
+      letter-spacing: 2px;
+      text-shadow: 0 0 8px #56ccf2;
+      cursor: default;
+      user-select: none;
+    }
+    nav a {
+      color: #a8c0ff;
+      text-decoration: none;
+      margin-left: 2.2rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding-bottom: 4px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+      letter-spacing: 0.6px;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      color: #56ccf2;
+      border-bottom-color: #56ccf2;
+      transform: translateY(-2px);
+    }
+    main {
+      flex: 1;
+      max-width: 700px;
+      margin: 6rem auto 6rem;
+      padding: 0 2rem;
+      text-align: center;
+      line-height: 1.65;
+      background: rgba(255 255 255 / 0.05);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgb(50 70 150 / 0.3);
+      backdrop-filter: blur(10px);
+      color: #cdf0ff;
+    }
+    main h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #56ccf2;
+      text-shadow: 0 0 10px #56ccf2;
+    }
+    #countdown {
+      font-size: 5rem;
+      font-weight: 900;
+      margin: 2rem 0;
+      color: #ffcc00;
+      text-shadow: 0 0 8px #ffcc00;
+    }
+    p.info {
+      font-size: 1.3rem;
+      color: #aad8ffcc;
+      max-width: 550px;
+      margin: 0 auto 2rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .btn {
+      background: #5865f2;
+      padding: 1rem 3rem;
+      border-radius: 50px;
+      font-weight: 700;
+      color: white;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+      font-size: 1.2rem;
+      display: inline-block;
+      box-shadow: 0 5px 15px #5865f2aa;
+    }
+    .btn:hover {
+      background: #4752c4;
+      transform: scale(1.08);
+      box-shadow: 0 8px 22px #4752c4dd;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      main {
+        margin: 4rem 1rem 4rem;
+        padding: 2rem 1rem;
+      }
+      header {
+        padding: 1rem 1.5rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        margin-left: 1rem;
+        font-size: 1rem;
+      }
+      main h2 {
+        font-size: 2.2rem;
+      }
+      #countdown {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rxmlo</h1>
+    <nav>
+      <a href="index.html">Anasayfa</a>
+      <a href="komutlar.html">Komutlar</a>
+      <a href="rxmlo-yap.html">Kendi Rxmlo'nu Yap</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Rxmlo Bot Davetine Hoş Geldiniz</h2>
+    <p class="info">
+      Sunucunuzu bir üst seviyeye taşımak için hazır mısınız? 
+      Aşağıdaki sayfadan botumuzu kolayca davet edebilirsiniz. Yönlendiriliyorsunuz...
+    </p>
+    <div id="countdown">3</div>
+    <a
+      href="https://discord.com/oauth2/authorize?client_id=1234567890&scope=bot&permissions=8"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn"
+    >
+      Elle Davet Et
+    </a>
+  </main>
+
+  <script>
+    let seconds = 3;
+    const countdown = document.getElementById('countdown');
+    const redirectUrl = "https://discord.com/oauth2/authorize?client_id=1279071496983281758&scope=bot&permissions=8";
+
+    const interval = setInterval(() => {
+      seconds--;
+      countdown.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = redirectUrl;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

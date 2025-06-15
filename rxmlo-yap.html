@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kendi Rxmlo'nu Yap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: #e0e6f8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+    header {
+      background: rgba(255 255 255 / 0.05);
+      backdrop-filter: blur(12px);
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 15px rgb(66 135 245 / 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #4ca1af;
+      letter-spacing: 2px;
+      text-shadow: 0 0 8px #56ccf2;
+      cursor: default;
+      user-select: none;
+    }
+    nav a {
+      color: #a8c0ff;
+      text-decoration: none;
+      margin-left: 2.2rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding-bottom: 4px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+      letter-spacing: 0.6px;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      color: #56ccf2;
+      border-bottom-color: #56ccf2;
+      transform: translateY(-2px);
+    }
+    main {
+      flex: 1;
+      max-width: 850px;
+      margin: 5rem auto 6rem;
+      padding: 2rem 3rem;
+      line-height: 1.65;
+      background: rgba(255 255 255 / 0.07);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgb(50 70 150 / 0.4);
+      backdrop-filter: blur(12px);
+      color: #dbeeff;
+    }
+    main h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #56ccf2;
+      text-shadow: 0 0 10px #56ccf2;
+      text-align: center;
+    }
+    main p.description {
+      font-size: 1.3rem;
+      margin-bottom: 2.5rem;
+      font-weight: 600;
+      color: #b1c9ffcc;
+      text-align: center;
+      user-select: none;
+    }
+    .highlight {
+      color: #ffd166;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      text-shadow: 0 0 10px #ffca28;
+    }
+    section.steps {
+      margin-top: 2rem;
+      border-left: 5px solid #56ccf2;
+      padding-left: 1.8rem;
+    }
+    section.steps h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #4ca1af;
+      user-select: none;
+    }
+    section.steps ol {
+      list-style-type: decimal;
+      margin-left: 1rem;
+      color: #e0e6f8cc;
+      font-size: 1.15rem;
+      font-weight: 500;
+      line-height: 1.6;
+      user-select: text;
+    }
+    section.steps ol li {
+      margin-bottom: 1rem;
+      transition: color 0.3s ease;
+    }
+    section.steps ol li:hover {
+      color: #56ccf2;
+      cursor: default;
+    }
+    footer {
+      background: rgba(255 255 255 / 0.05);
+      padding: 1.5rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #7993c2dd;
+      letter-spacing: 0.1em;
+      user-select: none;
+    }
+    .command-highlight {
+      background: #56ccf2;
+      color: #0b1736;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 0 8px #56ccf2aa;
+      user-select: text;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      main {
+        margin: 3rem 1rem 4rem;
+        padding: 2rem 1rem;
+      }
+      header {
+        padding: 1rem 1.5rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        margin-left: 1rem;
+        font-size: 1rem;
+      }
+      main h2 {
+        font-size: 2.2rem;
+      }
+      section.steps h3 {
+        font-size: 1.6rem;
+      }
+      section.steps ol {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rxmlo</h1>
+    <nav>
+      <a href="index.html">Anasayfa</a>
+      <a href="komutlar.html">Komutlar</a>
+      <a href="bot-davet.html">Bot Davet</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Kendi Rxmlo Discord Botunu Yarat!</h2>
+    <p class="description">
+      Rxmlo'nun eşsiz gücünü sunucun için kendi botunda deneyimlemeye ne dersin? 
+      Tek yapman gereken adımları takip etmek! Sadece <span class="highlight">100₺</span> fiyatıyla, herkes kolayca kendi Rxmlo'sunu oluşturabilir.
+      <br /><br />
+      Gelişmiş moderasyon, eğlence, seviye sistemi ve daha fazlası artık senin parmaklarının ucunda.
+    </p>
+
+    <section class="steps">
+      <h3>Adım Adım Kendi Botunu Yap</h3>
+      <ol>
+        <li>Discord geliştirici portalına giriş yap ve yeni bir bot oluştur.</li>
+        <li>Bot token'ını güvenli bir yerde sakla.</li>
+        <li>Bot kodunu aşağıdaki örnekle başlat:</li>
+        <pre class="command-highlight">/kendi-botunu-yap</pre>
+        <li>Sunucuna botu davet et ve özelleştirmelere başla.</li>
+        <li>Her komut ve özelliği Rxmlo'nun güçlü altyapısıyla yönet.</li>
+      </ol>
+    </section>
+
+    <section class="steps" style="margin-top: 3rem;">
+      <h3>Destek ve Yardım</h3>
+      <p style="color:#aad8ffcc; font-size:1.1rem; font-weight:500; user-select:none;">
+        Takıldığın yerlerde bizim destek ekibimize ulaşabilirsin. 
+        Ayrıca <a href="bot-davet.html" style="color:#56ccf2; text-decoration:none;">botu davet ederek</a> denemeler yapabilir, 
+        <a href="komutlar.html" style="color:#56ccf2; text-decoration:none;">komutlar sayfamızdan</a> hangi komutları kullanabileceğini görebilirsin.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Rxmlo Yazılım | Kendi Botunu Yaratmanın Tam Zamanı!</p>
+  </footer>
+</body>
+</html>
