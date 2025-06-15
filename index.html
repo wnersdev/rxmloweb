@@ -10,13 +10,13 @@
   <meta name="theme-color" content="#56ccf2" />
   <meta property="og:title" content="Rxmlo - Gelişmiş Discord Botu" />
   <meta property="og:description" content="Seviye sistemi, moderasyon, eğlence komutları ve daha fazlası ile sunucunuzu bir üst seviyeye taşıyın." />
-  <meta property="og:image" content="https://rxmloweb.vercel.app/avatar/rxmlo-og.png" />
+  <meta property="og:image" content="avatar/rxmlo-og.png" />
   <meta property="og:url" content="https://rxmloweb.vercel.app/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rxmlo - Discord Botu" />
   <meta name="twitter:description" content="Rxmlo botu ile sunucunu geliştirmeye hemen başla!" />
-  <meta name="twitter:image" content="https://rxmloweb.vercel.app/avatar/rxmlo-og.png" />
+  <meta name="twitter:image" content="avatar/rxmlo-og.png" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet" />
@@ -113,7 +113,8 @@
       font-size: 1.2rem;
       color: #ccd6f6dd;
       max-width: 720px;
-      margin: 0 auto 3rem;
+      margin: 0 auto 1.8rem;
+      line-height: 1.6;
     }
     footer {
       background: rgba(255 255 255 / 0.05);
@@ -121,6 +122,30 @@
       text-align: center;
       font-size: 0.9rem;
       color: #7993c2dd;
+    }
+
+    /* Gelişmiş buton stili */
+    .btn-davet {
+      display: inline-block;
+      padding: 0.75rem 2.2rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      background: linear-gradient(135deg, #56ccf2, #2f80ed);
+      border: none;
+      border-radius: 40px;
+      box-shadow: 0 6px 12px rgba(86, 204, 242, 0.6);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      user-select: none;
+      margin-top: 1rem;
+      letter-spacing: 1.1px;
+    }
+    .btn-davet:hover {
+      background: linear-gradient(135deg, #2f80ed, #56ccf2);
+      box-shadow: 0 8px 20px rgba(86, 204, 242, 0.9);
+      transform: translateY(-3px);
     }
 
     @media (max-width: 640px) {
@@ -169,11 +194,12 @@
       Rxmlo, sıradan bir Discord botu olmanın ötesine geçerek; moderasyon, eğlence, seviye sistemi, otomasyon, güvenlik ve topluluk yönetimini tek bir merkezde toplayan yeni nesil bir yapay zekâ destekli asistandır. Her ölçekten sunucu için optimize edilmiş olan Rxmlo, sade arayüzü ve özelleştirilebilir altyapısıyla yöneticilerin yükünü hafifletirken, üyelerin etkileşimini artırmayı hedefler.
     </p>
     <p>
-      Dinamik komut sistemi, anlık analiz yetenekleri ve güncellenebilir modülleri sayesinde Rxmlo; sunucunuza profesyonel bir görünüm kazandırır. İster bir oyun topluluğu olun, ister eğitim ya da içerik sunan bir ağ — Rxmlo, tam ihtiyacınız olan destekle hizmetinizde.  
+      Dinamik komut sistemi, anlık analiz yetenekleri ve güncellenebilir modülleri sayesinde Rxmlo; sunucunuza profesyonel bir görünüm kazandırır. İster bir oyun topluluğu olun, ister eğitim ya da içerik sunan bir ağ — Rxmlo, tam ihtiyacınız olan destekle hizmetinizde.
     </p>
     <p>
       Şimdi sunucunuza Rxmlo’yu ekleyin ve sıradanlıktan çıkıp gerçek anlamda <strong>geleceğin sunucusunu</strong> inşa etmeye başlayın. Teknolojinin sunduğu en gelişmiş Discord deneyimine merhaba deyin.
     </p>
+    <a href="bot-davet.html" class="btn-davet" role="button" aria-label="Botu Davet Et">Botu Davet Et</a>
   </main>
 
   <footer>
